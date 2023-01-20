@@ -169,7 +169,7 @@ I would like to thanks Microverse to guide me to complete this project.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/MudasirSherwani/bookstore-in-react/LICENSE.md) licensed.
+This project is [MIT](https://github.com/MudasirSherwani/bookstore-in-react/blob/Development/LICENSE.md) licensed.
  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
