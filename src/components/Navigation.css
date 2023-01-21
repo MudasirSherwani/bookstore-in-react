@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 15px 15px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 20px;
+}
+
+h1 {
+  font-size: 38px;
+  color: rgb(19, 133, 255);
+}
+
+.navitem {
+  font-size: 18px;
+}
+
+.item {
+  padding-left: 21px;
+  text-decoration: none;
+}

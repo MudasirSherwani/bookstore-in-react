@@ -1,0 +1,11 @@
+.Category {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Category-text {
+  font-size: 38px;
+  margin-top: 90px;
+}

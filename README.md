@@ -39,7 +39,7 @@ By building this application, I have learned how to use React and Redux.
 - CSS
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [React](https://github.com/microverseinc/curriculum-javascript/blob/main/todo-list/lessons/webpack_v1_1.md)
-
+- [Redux]
 <details>
   <summary>Server</summary>
   <ul>
@@ -50,15 +50,18 @@ By building this application, I have learned how to use React and Redux.
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a> Local Storage </a></li>
+    <li><a> API </a></li>
   </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
 
 - **Example of Single Page Application**
-- **Calculator**
-- **Consist of Three Pages**
+- **Display a list of books.**
+- **Add a book.**
+- **Remove a selected book.**
+- **Use Redux in React**
+- **Data fetch from API.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,7 +141,7 @@ https://netlify.app/
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **Statistical Calculator**
+- [ ] **Update Book List.**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -169,7 +172,7 @@ I would like to thanks Microverse to guide me to complete this project.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/MudasirSherwani/bookstore-in-react/LICENSE.md) licensed.
+This project is [MIT](https://github.com/MudasirSherwani/bookstore-in-react/blob/Development/LICENSE.md) licensed.
  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
