@@ -16,7 +16,6 @@ const BooksList = () => {
     },
   ];
   return (
-    <>
       <div className="book-list">
         <ul>
           {books.map((book) => (
@@ -24,12 +23,11 @@ const BooksList = () => {
               Title={book.Title}
               Author={book.Author}
               Category={book.Category}
-              key={book.Id}
+              Id={book.Id}
             />
           ))}
         </ul>
       </div>
-    </>
   );
 };
 
