@@ -29,8 +29,11 @@ By building this application, I have learned how to use React and Redux.
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
+**Bookstore: Initialize project with components** This project has lay foundations for your Bookstore website. I have created the React part of the app. I have also set up routing using React Router.
 
-**Bookstore: add reducers and actions** In this branch, i have configured Redux Store and write actions and reducer for adding and removing books.
+**Bookstore: Add reducers and actions** In this branch, i have configured Redux Store and write actions and reducer for adding and removing books.
+
+**Bookstore: Use Redux in React components** I have used Redux store to display books. Some UI Elements add to the components and make them dispatch actions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
