@@ -13,7 +13,7 @@ const reducerForCategories = (state = emptyState, action) => {
     case BOOK_STATUS:
       return {
         ...state,
-        categories: [...state.categories, 'Comming Soon'],
+        categories: [...state.categories, 'Under construction'],
       };
     default:
       return state;
