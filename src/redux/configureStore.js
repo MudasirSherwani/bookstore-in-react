@@ -8,6 +8,6 @@ const reducerCombined = combineReducers({
 });
 
 const configStore = configureStore({
-    reducerCombined,
+  reducerCombined,
 });
 export default configStore;

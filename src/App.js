@@ -6,12 +6,12 @@ import Category from './components/Category';
 
 export default function App() {
   return (
-      <Router>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Books />} />
-          <Route path="/Category" element={<Category />} />
-        </Routes>
-      </Router>
+    <Router>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Books />} />
+        <Route path="/Category" element={<Category />} />
+      </Routes>
+    </Router>
   );
 }

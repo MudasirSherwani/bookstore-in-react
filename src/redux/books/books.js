@@ -4,12 +4,12 @@ const initialState = {
   books: [],
 };
 export const addNewBook = (addNewValue) => (
-    { type: ADD_BOOK, addNewValue }
-    );
+  { type: ADD_BOOK, addNewValue }
+);
 
 export const removeBook = (id) => (
-    { type: REMOVE_BOOK, id }
-    );
+  { type: REMOVE_BOOK, id }
+);
 
 const reducerForBooks = (state = initialState, action) => {
   switch (action.type) {
