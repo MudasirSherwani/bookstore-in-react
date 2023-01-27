@@ -20,9 +20,16 @@ export const getBooksData = createAsyncThunk(
 );
 
 
-export const addNewBook = (addNewValue) => (
-  { type: ADD_BOOK, addNewValue }
-);
+export const addNewBook = (addNewValue) => (dispatch) => {
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(book),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  }).then(() => dispatch(
+  { type: ADD_BOOK, addNewValue }));
+};
 
 export const removeBook = (keyValue) => (
   { type: REMOVE_BOOK, keyValue }
