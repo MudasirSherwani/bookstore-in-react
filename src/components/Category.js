@@ -1,12 +1,22 @@
 import React from 'react';
 import './Category.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { bookStatus } from '../redux/categories/categories';
 
-const Category = () => (
-  <div className="Category">
-    <div className="Category-text">
-      <button type="button">Check status</button>
+const Category = () => {
+  const selectedCategory = useSelector((state) => state.categories);
+  const dispatchCategory = useDispatch();
+  console.log(selectedCategory);
+  const btnCheckStatus = () => {
+    dispatchCategory(bookStatus());
+  };
+  return (
+    <div className="Category">
+      <div className="Category-text">
+        <h3>{selectedCategory.categories[0]}</h3>
+        <button onClick={btnCheckStatus} type="button">Check status</button>
+      </div>
     </div>
-  </div>
-);
-
+  );
+};
 export default Category;
