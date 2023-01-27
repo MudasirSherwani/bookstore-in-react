@@ -4,14 +4,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addNewBook } from '../redux/books/books';
 
 const AddBook = () => {
-  const [initialState, setState] = useState({ key: '', title: '', author: '' });
+  const [initialState, setState] = useState({ keyValue: '', title: '', author: '' });
 
   const arrBook = useSelector((state) => state.books.books);
-  const key = arrBook.length;
+  const keyValue = arrBook.length;
   const dataEntered = (event) => {
     setState({
       ...initialState,
-      key: (key + 1).toString(),
+      keyValue: (keyValue + 1).toString(),
       [event.target.name]: event.target.value,
     });
   };
@@ -20,7 +20,7 @@ const AddBook = () => {
   const submitBookData = (e) => {
     e.preventDefault();
     dispatchBooks(addNewBook(initialState));
-    setState({ key: '', title: '', author: '' });
+    setState({ keyValue: '', title: '', author: '' });
   };
 
   return (

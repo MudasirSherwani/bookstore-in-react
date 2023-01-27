@@ -4,18 +4,18 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
 const BookData = (props) => {
-  const { key, Title, Author } = props;
+  const { keyValue, title, author } = props;
   const dispatchBooks = useDispatch();
   const removeEvent = () => {
-    dispatchBooks(removeBook(key));
+    dispatchBooks(removeBook(keyValue));
   };
 
   return (
     <div className="book-item">
       <li>
-        <h2>{Title}</h2>
-        <h2>{key}</h2>
-        <h4>{Author}</h4>
+        <h2>{title}</h2>
+        <h2>{keyValue}</h2>
+        <h4>{author}</h4>
         <button type="button" onClick={removeEvent}>Remove</button>
       </li>
     </div>
@@ -23,8 +23,8 @@ const BookData = (props) => {
 };
 
 BookData.propTypes = {
-  Title: PropTypes.string.isRequired,
-  Author: PropTypes.string.isRequired,
-  key: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  keyValue: PropTypes.string.isRequired,
 };
 export default BookData;

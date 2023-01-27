@@ -4,15 +4,15 @@ import BookItem from './BookData';
 
 const BooksList = () => {
   const data = useSelector((state) => state.books);
-
   return (
     <div className="book-list">
       <ul>
-        {data.map((book) => (
+        {data.books.map((book) => (
           <BookItem
-            Title={book.Title}
-            Author={book.Author}
-            key={book.key}
+            title={book.title}
+            author={book.author}
+            keyValue={book.keyValue}
+            key={book.keyValue}
           />
         ))}
       </ul>
