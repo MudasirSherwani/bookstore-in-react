@@ -1,14 +1,25 @@
+import { createAsyncThunk } from '@reduxjs/toolkit';
 const ADD_BOOK = 'redux/books/BOOK_ADDED';
 const REMOVE_BOOK = 'redux/books/BOOK_REMOVED';
+const GET_BOOK = 'books/books/GET_BOOK';
+const initialState = [];
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jPx8Mihfhi8LHd7NvC4n/books';
 
-const initialState = {
-  bookCounts: '3',
-  books: [
-    { keyValue: '1', title: 'The Innovator’s Dilemma', author: 'Clayton Christens' },
-    { keyValue: '2', title: 'Hundred Years of Solitude', author: 'Gabriel Garcia Marquez' },
-    { keyValue: '3', title: 'The Soul of a New Machine', author: 'racy Kidder' },
-  ],
-};
+export const getBooksData = createAsyncThunk(
+  GET_BOOK,
+  async (args, { dispatch }) => {
+    const response = await fetch(url);
+    const bookData = await response.json();
+    const books = Object.keys(bookData).map((key) => ({
+      keyValue: key,
+      ...data[keyValue][0],
+    }));
+    dispatch({ type: GET_BOOK, books });
+    return books;
+  },
+);
+
+
 export const addNewBook = (addNewValue) => (
   { type: ADD_BOOK, addNewValue }
 );
