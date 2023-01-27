@@ -6,7 +6,6 @@ import { bookStatus } from '../redux/categories/categories';
 const Category = () => {
   const selectedCategory = useSelector((state) => state.categories);
   const dispatchCategory = useDispatch();
-  console.log(selectedCategory);
   const btnCheckStatus = () => {
     dispatchCategory(bookStatus());
   };
