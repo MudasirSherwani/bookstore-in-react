@@ -2,6 +2,7 @@ import React from 'react';
 import './Category.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { bookStatus } from '../redux/categories/categories';
+
 const Category = () => {
   const selectedCategory = useSelector((state) => state.categories);
   const dispatchCategory = useDispatch();
@@ -9,7 +10,7 @@ const Category = () => {
   const btnCheckStatus = () => {
     dispatchCategory(bookStatus());
   };
-return (
+  return (
     <div className="Category">
       <div className="Category-text">
         <h2>{selectedCategory.Categories[0]}</h2>

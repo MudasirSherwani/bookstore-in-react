@@ -11,13 +11,14 @@ const BookData = (props) => {
   };
 
   return (
-  <div className="book-item">
-    <li>
-      <h2>{Title}</h2>
-      <h4>{Author}</h4>
-      <button type="button"  onClick={removeEvent}>Remove</button>
-    </li>
-  </div>
+    <div className="book-item">
+      <li>
+        <h2>{Title}</h2>
+        <h2>{key}</h2>
+        <h4>{Author}</h4>
+        <button type="button" onClick={removeEvent}>Remove</button>
+      </li>
+    </div>
   );
 };
 

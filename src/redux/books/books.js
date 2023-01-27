@@ -1,5 +1,6 @@
 const ADD_BOOK = 'redux/books/BOOK_ADDED';
 const REMOVE_BOOK = 'redux/books/BOOK_REMOVED';
+
 const initialState = {
   bookCounts: 3,
   books: [

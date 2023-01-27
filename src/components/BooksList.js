@@ -1,18 +1,18 @@
-import BookItem from './BookData';
 import React from 'react';
 import { useSelector } from 'react-redux';
+import BookItem from './BookData';
 
 const BooksList = () => {
-  const books = useSelector((state) => state.books);
+  const data = useSelector((state) => state.books);
+
   return (
     <div className="book-list">
       <ul>
-        {books.books.map((bookData) => (
+        {data.map((book) => (
           <BookItem
-            Title={bookData.Title}
-            Author={bookData.Author}
-            id={bookData.id}
-            key={bookData.Id}
+            Title={book.Title}
+            Author={book.Author}
+            key={book.key}
           />
         ))}
       </ul>

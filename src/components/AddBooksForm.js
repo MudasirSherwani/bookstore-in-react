@@ -1,4 +1,4 @@
-import './AddBookForm.css';
+import './AddBooksForm.css';
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addNewBook } from '../redux/books/books';
@@ -24,17 +24,17 @@ const AddBook = () => {
   };
 
   return (
-  <div className="add-book">
-    <h2>ADD NEW BOOK</h2>
-    <div>
-      <form onSubmit={submitBookData}>
-        <input type="text" name="title" placeholder="Add Book Title" value={initialState.title} onChange={dataEntered}/>
-        <input type="text" name="author" placeholder="Add Book Author" value={initialState.author} onChange={dataEntered}/>
-        <button type="submit">ADD BOOK </button>
-      </form>
+    <div className="add-book">
+      <h2>ADD NEW BOOK</h2>
+      <div>
+        <form onSubmit={submitBookData}>
+          <input type="text" name="title" placeholder="Add Book Title" value={initialState.title} onChange={dataEntered} />
+          <input type="text" name="author" placeholder="Add Book Author" value={initialState.author} onChange={dataEntered} />
+          <button type="submit">ADD BOOK </button>
+        </form>
+      </div>
     </div>
-  </div>
-);
-  };
+  );
+};
 
 export default AddBook;
