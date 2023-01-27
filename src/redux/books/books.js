@@ -31,9 +31,15 @@ export const addNewBook = (addNewValue) => (dispatch) => {
   { type: ADD_BOOK, addNewValue }));
 };
 
-export const removeBook = (keyValue) => (
-  { type: REMOVE_BOOK, keyValue }
-);
+export const removeBook = (keyValue) => (dispatch) => {
+  fetch(`${url}/${keyValue}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  }).then(() => dispatch(
+  { type: REMOVE_BOOK, keyValue  }));
+};
 
 const reducerForBooks = (state = initialState, action) => {
   switch (action.type) {
