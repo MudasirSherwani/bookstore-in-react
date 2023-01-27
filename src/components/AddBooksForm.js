@@ -1,10 +1,12 @@
 import './AddBooksForm.css';
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addNewBook } from '../redux/books/books';
+import { addNewBook } from '../redux/books/booksApi';
 
 const AddBook = () => {
-  const [initialState, setState] = useState({ keyValue: '', title: '', author: '' });
+  const [initialState, setState] = useState({
+    keyValue: '', title: '', author: '', category: '',
+  });
 
   const arrBook = useSelector((state) => state.books.books);
   const keyValue = arrBook.length;
@@ -20,7 +22,9 @@ const AddBook = () => {
   const submitBookData = (e) => {
     e.preventDefault();
     dispatchBooks(addNewBook(initialState));
-    setState({ keyValue: '', title: '', author: '' });
+    setState({
+      keyValue: '', title: '', author: '', category: '',
+    });
   };
 
   return (

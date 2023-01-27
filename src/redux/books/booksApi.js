@@ -1,21 +1,28 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-const ADD_BOOK = 'redux/books/BOOK_ADDED';
-const REMOVE_BOOK = 'redux/books/BOOK_REMOVED';
-const GET_BOOK = 'redux/books/GET_BOOKS';
 
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jPx8Mihfhi8LHd7NvC4n/books';
 const initialState = {
-  books: {},
+  books: [],
   fetchStatus: true,
 };
 
 export const FetchBooksApi = createAsyncThunk(
-  GET_BOOK,
+  'books/FetchBooksApi',
   async (thunkAPI) => {
     try {
       const response = await axios.get(url);
-      return response.data;
+      const { data } = response;
+      const books = Object.entries(data).map(([key, value]) => {
+        const { title, category, author } = value[0];
+        return {
+          keyValue: key,
+          title,
+          category,
+          author,
+        };
+      });
+      return books;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
     }
@@ -23,23 +30,23 @@ export const FetchBooksApi = createAsyncThunk(
 );
 
 export const addNewBook = createAsyncThunk(
-  ADD_BOOK,
-  async (bookValues, thunkAPI) => {
-    await axios.post(url, bookValues);
+  'book/addNewBook',
+  async (payload, thunkAPI) => {
+    await axios.post(url, payload);
     return thunkAPI.dispatch(FetchBooksApi());
   },
 );
 
 export const removeBook = createAsyncThunk(
-  REMOVE_BOOK,
-  async (bookValues, thunkAPI) => {
-    await axios.delete(`${url}/${bookValues}`);
+  'book/removeBook',
+  async (payload, thunkAPI) => {
+    await axios.delete(`${url}/${payload}`);
     return thunkAPI.dispatch(FetchBooksApi());
   },
 );
 
 const FetchBooks = createSlice({
-  name: 'getBooks',
+  name: 'reducerForBooks',
   initialState,
   reducers: {},
   extraReducers: {
@@ -48,7 +55,7 @@ const FetchBooks = createSlice({
     },
     [FetchBooksApi.fulfilled]: (state, action) => {
       state.fetchStatus = false;
-      state.books = action.bookValues;
+      state.books = action.payload;
     },
     [FetchBooksApi.rejected]: (state) => {
       state.fetchStatus = false;
