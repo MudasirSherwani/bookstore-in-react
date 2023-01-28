@@ -1,18 +1,20 @@
 import './AddBooksForm.css';
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { addNewBook } from '../redux/books/books';
+import { useDispatch } from 'react-redux';
+import { nanoid } from '@reduxjs/toolkit';
+import { addNewBook } from '../redux/books/booksApi';
 
 const AddBook = () => {
-  const [initialState, setState] = useState({ keyValue: '', title: '', author: '' });
+  const [initialState, setState] = useState({
+    item_id: '', title: '', author: '', category: '',
+  });
 
-  const arrBook = useSelector((state) => state.books.books);
-  const keyValue = arrBook.length;
   const dataEntered = (event) => {
     setState({
       ...initialState,
-      keyValue: (keyValue + 1).toString(),
+      item_id: nanoid(),
       [event.target.name]: event.target.value,
+      category: 'Tech',
     });
   };
 
@@ -20,7 +22,9 @@ const AddBook = () => {
   const submitBookData = (e) => {
     e.preventDefault();
     dispatchBooks(addNewBook(initialState));
-    setState({ keyValue: '', title: '', author: '' });
+    setState({
+      item_id: '', title: '', author: '', category: 'Tech',
+    });
   };
 
   return (
