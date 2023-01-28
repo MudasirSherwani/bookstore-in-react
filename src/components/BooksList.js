@@ -13,10 +13,11 @@ const BooksList = () => {
   [dispatch]);
 
   return (
-    <div className="book-list">
+    <div className="BooksList">
       <ul>
         {books.map((book) => (
           <BookItem
+            category={book.category}
             title={book.title}
             author={book.author}
             keyValue={book.keyValue}
@@ -25,6 +26,7 @@ const BooksList = () => {
         ))}
       </ul>
     </div>
+
   );
 };
 
