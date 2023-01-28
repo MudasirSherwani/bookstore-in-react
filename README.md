@@ -75,7 +75,7 @@ By building this application, I have learned how to use React and Redux.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Bookstore](https://yourdeployedapplicationlink.com)
+- [Bookstore](https://stately-cucurucho-5e930c.netlify.app/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
