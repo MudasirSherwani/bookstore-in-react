@@ -14,7 +14,7 @@ const AddBook = () => {
       ...initialState,
       item_id: nanoid(),
       [event.target.name]: event.target.value,
-      category: 'Tech',
+      category: 'Technology',
     });
   };
 
@@ -23,18 +23,18 @@ const AddBook = () => {
     e.preventDefault();
     dispatchBooks(addNewBook(initialState));
     setState({
-      item_id: '', title: '', author: '', category: 'Tech',
+      item_id: '', title: '', author: '', category: 'Technology',
     });
   };
 
   return (
     <div className="add-book">
-      <h2>ADD NEW BOOK</h2>
+      <h2 className="add-book-title">ADD NEW BOOK</h2>
       <div>
-        <form onSubmit={submitBookData}>
-          <input type="text" name="title" placeholder="Add Book Title" value={initialState.title} onChange={dataEntered} />
-          <input type="text" name="author" placeholder="Add Book Author" value={initialState.author} onChange={dataEntered} />
-          <button type="submit">ADD BOOK </button>
+        <form className="add-book-form" onSubmit={submitBookData}>
+          <input className="title input" type="text" name="title" placeholder="Add Book Title" value={initialState.title} onChange={dataEntered} />
+          <input className="author input" type="text" name="author" placeholder="Add Book Author" value={initialState.author} onChange={dataEntered} />
+          <button className="primary-button-big" type="submit">ADD BOOK </button>
         </form>
       </div>
     </div>

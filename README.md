@@ -37,6 +37,8 @@ By building this application, I have learned how to use React and Redux.
 
 **Bookstore: Connect to API** I have connect this React-Redux application to an existing API to create and remove books in a remote server.
 
+**Bookstore: Styling** This is the last feature of the Bookstore website. All the functionality is already done, I have to add styling. I have used Zeplin as a collaboration tool.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -73,7 +75,7 @@ By building this application, I have learned how to use React and Redux.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Bookstore](https://yourdeployedapplicationlink.com)
+- [Bookstore](https://stately-cucurucho-5e930c.netlify.app/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
