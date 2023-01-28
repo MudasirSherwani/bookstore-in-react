@@ -1,3 +1,52 @@
-.add-book {
-  padding-top: 10vh;
+.add-book-title,
+.input {
+  font-family:
+    "Montserrat",
+    sans-serif;
+}
+
+.add-book-form {
+  margin-top: 20px;
+  display: flex;
+  grid-gap: 32px;
+  gap: 32px;
+}
+
+.add-book-title {
+  font-size: 1.25rem;
+  color: #888;
+  font-weight: 700;
+  letter-spacing: -0.18px;
+}
+
+.input {
+  padding: 12px;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  color: #121212;
+}
+
+.title {
+  width: 49%;
+}
+
+.author {
+  width: 31%;
+}
+
+.primary-button-big {
+  cursor: pointer;
+  width: 20%;
+  padding: 12px;
+  color: #fff;
+  font-size: 0.813rem;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  letter-spacing: 0.5px;
 }
