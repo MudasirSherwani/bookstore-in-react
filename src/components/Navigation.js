@@ -7,8 +7,8 @@ const Navigation = () => (
   <nav className="nav-bar" data-testid="Navigation">
     <a className="nav-brand" href="#/">Bookstore CMS</a>
     <ul className="nav-links">
-      <Link className="nav-link active-link" to="/" aria-current="page">BOOKS</Link>
-      <Link className="nav-link" to="/Category">CATEGORIES</Link>
+      <li><Link className="nav-link active-link" to="/" aria-current="page">BOOKS</Link></li>
+      <li><Link className="nav-link" to="/Category">CATEGORIES</Link></li>
     </ul>
     <button className="ic-button" type="button">
       <img alt="person" className="material-icons primary-color" src={person} />

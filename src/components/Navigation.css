@@ -1,8 +1,7 @@
 .nav-bar {
   padding: 24px 4%;
   background-color: #fff;
-  border-bottom: 1px solid #e8e8e8;
-  display: flex;
+  border-bottom: var(--border-solid);
   align-items: center;
   grid-gap: 40px;
   gap: 40px;
@@ -10,14 +9,13 @@
 
 .nav-brand {
   font-size: 1.875rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-monts);
   font-weight: 700;
   color: #0290ff;
   text-decoration: none;
 }
 
 .nav-links {
-  display: flex;
   flex-grow: 1;
   list-style-type: none;
   grid-gap: 40px;
@@ -32,7 +30,7 @@
 .nav-link {
   font-size: 0.813rem;
   letter-spacing: 1.9px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-monts);
   text-decoration: none;
 }
 
@@ -41,6 +39,6 @@
   width: 2.813rem;
   height: 2.813rem;
   border-radius: 50%;
-  border: 1px solid #e8e8e8;
+  border: var(--border-solid);
   background-color: #fff;
 }

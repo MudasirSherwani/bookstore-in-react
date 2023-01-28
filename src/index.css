@@ -1,3 +1,9 @@
+:root {
+  --font-roboto: "Roboto Slab", sans-serif;
+  --font-monts: "Montserrat", sans-serif;
+  --border-solid: 1px solid #e8e8e8;
+}
+
 #root {
   margin: 0;
   padding: 0 0 8%;
@@ -34,8 +40,20 @@ code {
   padding: 4%;
 }
 
-.BooksList {
+.BooksList,
+.content,
+.book-data,
+.actions,
+.progress-container,
+.chapter-container,
+.nav-links,
+.add-book-form,
+.nav-bar,
+.circ-progress-container {
   display: flex;
+}
+
+.BooksList {
   flex-direction: column;
   grid-gap: 0.938rem;
   gap: 0.938rem;
@@ -47,17 +65,15 @@ code {
 .book-item {
   background-color: #fff;
   border-radius: 4px;
-  border: 1px solid #e8e8e8;
+  border: var(--border-solid);
   padding: 2rem;
 }
 
 .content {
-  display: flex;
   justify-content: space-between;
 }
 
 .book-data {
-  display: flex;
   flex-direction: column;
   width: 100%;
 }
@@ -69,18 +85,14 @@ code {
 }
 
 .book-category {
-  font-family:
-    "Montserrat",
-    sans-serif;
+  font-family: var(--font-monts);
   font-size: 0.875rem;
   opacity: 0.5;
 }
 
 .book-author,
 .book-title {
-  font-family:
-    "Roboto Slab",
-    sans-serif;
+  font-family: var(--font-roboto);
 }
 
 .book-title {
@@ -96,7 +108,6 @@ code {
 }
 
 .actions {
-  display: flex;
   align-items: center;
   margin-top: 1.313rem;
 }
@@ -104,9 +115,7 @@ code {
 .button-outline {
   border: none;
   color: #4386bf;
-  font-family:
-    "RobotoSlab",
-    sans-serif;
+  font-family: var(--font-roboto);
   background-color: transparent;
   font-size: 0.875rem;
   font-weight: 300;
@@ -115,7 +124,6 @@ code {
 }
 
 .progress-container {
-  display: flex;
   align-items: center;
 }
 
@@ -128,7 +136,6 @@ code {
 
 .circ-progress-container {
   padding: 0.63rem 0.625rem 0.75rem 0.75rem;
-  display: flex;
   width: 5.625rem;
   height: 5.625rem;
   justify-content: center;
@@ -148,9 +155,7 @@ code {
 
 .completed,
 .percent {
-  font-family:
-    "Montserrat",
-    sans-serif;
+  font-family: var(--font-monts);
   color: #121212;
 }
 
@@ -171,7 +176,6 @@ code {
 }
 
 .chapter-container {
-  display: flex;
   flex-direction: column;
   grid-gap: 20px;
   gap: 20px;
@@ -180,7 +184,7 @@ code {
 
 .chapter,
 .chapter-label {
-  font-family: "RobotoSlab", sans-serif;
+  font-family: var(--font-roboto);
   font-weight: 300;
   color: #666060;
 }
@@ -202,9 +206,7 @@ code {
   background-color: #0290ff;
   border-radius: 3px;
   padding: 8px 24px;
-  font-family:
-    "Roboto Slab",
-    serif;
+  font-family: var(--font-roboto);
   font-weight: 300;
   letter-spacing: 0.5px;
   color: #fff;

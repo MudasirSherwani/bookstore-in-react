@@ -1,13 +1,10 @@
 .add-book-title,
 .input {
-  font-family:
-    "Montserrat",
-    sans-serif;
+  font-family: var(--font-monts);
 }
 
 .add-book-form {
   margin-top: 20px;
-  display: flex;
   grid-gap: 32px;
   gap: 32px;
 }
@@ -25,7 +22,7 @@
   font-size: 1rem;
   letter-spacing: -0.15px;
   border-radius: 4px;
-  border: 1px solid #e8e8e8;
+  border: var(--border-solid);
   color: #121212;
 }
 
@@ -44,7 +41,7 @@
   color: #fff;
   font-size: 0.813rem;
   font-weight: 700;
-  font-family: "Roboto Slab", serif;
+  font-family: var(--font-roboto);
   border-radius: 3px;
   background-color: #0290ff;
   border: none;

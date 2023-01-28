@@ -14,17 +14,15 @@ const BooksList = () => {
 
   return (
     <div className="BooksList">
-      <ul>
-        {books.map((book) => (
-          <BookItem
-            category={book.category}
-            title={book.title}
-            author={book.author}
-            keyValue={book.keyValue}
-            key={book.keyValue}
-          />
-        ))}
-      </ul>
+      {books.map((book) => (
+        <BookItem
+          category={book.category}
+          title={book.title}
+          author={book.author}
+          keyValue={book.keyValue}
+          key={book.keyValue}
+        />
+      ))}
     </div>
 
   );
